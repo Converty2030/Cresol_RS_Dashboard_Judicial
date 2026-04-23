@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Processual - 5000729-91.2026.8.21.0058</title>
+<style>
+  :root {
+    --azul-escuro: #1F3864;
+    --azul-medio: #2E5090;
+    --azul-claro: #D9E2F3;
+    --cinza-bg: #F4F6FA;
+    --cinza-borda: #E1E5EC;
+    --cinza-texto: #4A5568;
+    --verde: #2F855A;
+    --vermelho: #C53030;
+    --amarelo: #C05621;
+    --branco: #FFFFFF;
+    --sombra: 0 2px 8px rgba(31, 56, 100, 0.08);
+    --sombra-forte: 0 4px 16px rgba(31, 56, 100, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Calibri, Arial, sans-serif;
+    background: var(--cinza-bg);
+    color: #1A202C;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  .header {
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 100%);
+    color: white;
+    padding: 20px 32px;
+    box-shadow: var(--sombra-forte);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .header .logo-wrap {
+    flex-shrink: 0;
+    background: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+  }
+
+  .header .logo-wrap svg { display: block; height: 56px; width: auto; }
+
+  .header .titulo-bloco { flex: 1; min-width: 0; }
+
+  .header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .header .subtitulo {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 400;
+  }
+
+  .header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 8px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 700px) {
+    .header { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .header .logo-wrap svg { height: 42px; }
+  }
+
+  .container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  /* ===== SIDEBAR VERTICAL ===== */
+  .sidebar {
+    width: 290px;
+    flex-shrink: 0;
+    background: var(--branco);
+    border-radius: 10px;
+    padding: 16px 0;
+    box-shadow: var(--sombra);
+    height: fit-content;
+    position: sticky;
+    top: 24px;
+  }
+
+  .sidebar-header {
+    padding: 8px 20px 16px;
+    border-bottom: 1px solid var(--cinza-borda);
+    margin-bottom: 12px;
+  }
+
+  .sidebar-header .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--cinza-texto);
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .sidebar-header .valor {
+    font-size: 18px;
+    color: var(--azul-escuro);
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  /* ===== FILTRO DE DEVEDOR ===== */
+  .filtro-devedor {
+    padding: 0 20px 16px;
+    border-bottom: 1px solid var(--cinza-borda);
+    margin-bottom: 12px;
+  }
+
+  .filtro-devedor .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--cinza-texto);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .filtro-devedor .label::before {
+    content: "▼";
+    font-size: 9px;
+    color: var(--azul-escuro);
+  }
+
+  .filtro-devedor select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: 6px;
+    background: white;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.2s;
+  }
+
+  .filtro-devedor select:focus {
+    outline: none;
+    border-color: var(--azul-escuro);
+  }
+
+  .filtro-devedor select:hover {
+    border-color: var(--azul-medio);
+  }
+
+  .filtro-ativo-badge {
+    display: none;
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: var(--azul-claro);
+    color: var(--azul-escuro);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .filtro-ativo-badge.show { display: block; }
+
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 13px 20px;
+    background: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    color: var(--cinza-texto);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    gap: 10px;
+  }
+
+  .tab-btn:hover {
+    background: var(--cinza-bg);
+    color: var(--azul-escuro);
+  }
+
+  .tab-btn.active {
+    background: var(--azul-claro);
+    color: var(--azul-escuro);
+    border-left-color: var(--azul-escuro);
+    font-weight: 600;
+  }
+
+  .tab-btn .num {
+    background: var(--cinza-borda);
+    color: var(--azul-escuro);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .tab-btn.active .num {
+    background: var(--azul-escuro);
+    color: white;
+  }
+
+  /* ===== CONTEÚDO PRINCIPAL ===== */
+  .conteudo {
+    flex: 1;
+    background: var(--branco);
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: var(--sombra);
+    min-height: 600px;
+  }
+
+  .tab-panel { display: none; animation: fadeIn 0.3s ease; }
+  .tab-panel.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .tab-panel h2 {
+    font-size: 22px;
+    color: var(--azul-escuro);
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tab-panel .subtitle {
+    color: var(--cinza-texto);
+    font-size: 13px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--azul-claro);
+  }
+
+  .tab-panel p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #2D3748;
+    margin-bottom: 14px;
+    text-align: justify;
+  }
+
+  .tab-panel .destaque {
+    background: var(--azul-claro);
+    padding: 16px 20px;
+    border-left: 4px solid var(--azul-escuro);
+    border-radius: 6px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+
+  .tab-panel .destaque.alerta {
+    background: #FFF5E6;
+    border-left-color: var(--amarelo);
+  }
+
+  .tab-panel .destaque.negativo {
+    background: #FEE2E2;
+    border-left-color: var(--vermelho);
+  }
+
+  .tab-panel .destaque.positivo {
+    background: #DCFCE7;
+    border-left-color: var(--verde);
+  }
+
+  .tab-panel .destaque strong {
+    color: var(--azul-escuro);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tab-panel h3 {
+    font-size: 16px;
+    color: var(--azul-escuro);
+    margin: 24px 0 12px;
+    font-weight: 600;
+  }
+
+  /* ===== TABELAS ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  thead th {
+    background: var(--azul-escuro);
+    color: white;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--cinza-borda); }
+  tbody tr:nth-child(even) { background: var(--cinza-bg); }
+  tbody tr:hover { background: var(--azul-claro); }
+  tbody td { padding: 11px 14px; vertical-align: top; }
+
+  /* ===== CARDS DE NÚMEROS ===== */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .card {
+    background: linear-gradient(135deg, var(--azul-claro) 0%, #E8F0FA 100%);
+    border-radius: 8px;
+    padding: 18px;
+    border-left: 4px solid var(--azul-escuro);
+  }
+
+  .card .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--cinza-texto);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+  }
+
+  .card .valor {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--azul-escuro);
+    margin-top: 4px;
+  }
+
+  .card .detalhe {
+    font-size: 11px;
+    color: var(--cinza-texto);
+    margin-top: 4px;
+  }
+
+  /* ===== TAXAS DE JUROS ===== */
+  .taxas-juros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .taxa-card {
+    background: white;
+    border: 2px solid var(--azul-claro);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  .taxa-card:hover {
+    border-color: var(--azul-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(31, 56, 100, 0.1);
+  }
+
+  .taxa-card .nome {
+    font-size: 11px;
+    color: var(--cinza-texto);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .taxa-card .percent {
+    font-size: 24px;
+    color: var(--azul-escuro);
+    font-weight: 800;
+  }
+
+  .taxa-card .info {
+    font-size: 10px;
+    color: var(--cinza-texto);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* ===== LISTAS ===== */
+  ul.lista-custom {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul.lista-custom li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+    border-bottom: 1px dashed var(--cinza-borda);
+  }
+
+  ul.lista-custom li:last-child { border-bottom: none; }
+
+  ul.lista-custom li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: var(--azul-escuro);
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    background: var(--azul-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+    margin: 20px 0;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--azul-claro);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid var(--azul-escuro);
+    border-radius: 50%;
+  }
+
+  .timeline-item.atual::before {
+    background: var(--azul-escuro);
+    box-shadow: 0 0 0 4px var(--azul-claro);
+  }
+
+  .timeline-item.processual::before { border-color: var(--azul-escuro); }
+  .timeline-item.interno::before { border-color: var(--amarelo); }
+  .timeline-item.contato::before { border-color: var(--verde); }
+  .timeline-item.pesquisa::before { border-color: #805AD5; }
+
+  .timeline-item .data {
+    font-size: 12px;
+    color: var(--azul-escuro);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .timeline-item .titulo {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A202C;
+    margin: 4px 0 6px;
+  }
+
+  .timeline-item .descricao {
+    font-size: 13px;
+    color: var(--cinza-texto);
+    line-height: 1.6;
+    background: var(--cinza-bg);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-top: 6px;
+  }
+
+  .timeline-item .meta {
+    font-size: 11px;
+    color: var(--cinza-texto);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* Tag de status */
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .tag-verde { background: #C6F6D5; color: #22543D; }
+  .tag-vermelho { background: #FED7D7; color: #742A2A; }
+  .tag-amarelo { background: #FEEBC8; color: #7B341E; }
+  .tag-azul { background: var(--azul-claro); color: var(--azul-escuro); }
+  .tag-roxo { background: #E9D8FD; color: #553C9A; }
+
+  /* ===== FILTRO - OCULTA ELEMENTOS NÃO CORRESPONDENTES ===== */
+  body[data-filtro="aline"] [data-party]:not([data-party~="aline"]):not([data-party~="all"]),
+  body[data-filtro="cleiton"] [data-party]:not([data-party~="cleiton"]):not([data-party~="all"]),
+  body[data-filtro="cristiano"] [data-party]:not([data-party~="cristiano"]):not([data-party~="all"]) {
+    display: none !important;
+  }
+
+  .aviso-filtro {
+    display: none;
+    background: #FFF8DC;
+    border: 1.5px solid var(--amarelo);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #744210;
+    text-align: center;
+  }
+
+  body:not([data-filtro="todos"]) .aviso-filtro { display: block; }
+
+  @media (max-width: 900px) {
+    .container { flex-direction: column; padding: 12px; }
+    .sidebar { width: 100%; position: static; }
+    .conteudo { padding: 20px; }
+  }
+
+  /* ===== TELA DE LOGIN ===== */
+  .login-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0D3F5F 0%, #1F3864 50%, #2E5090 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+
+  .login-screen.hidden { display: none; }
+
+  .login-bg-arcs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  .login-bg-arcs svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3);
+  }
+
+  .login-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 44px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    animation: slideUp 0.5s ease;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .login-logo svg { height: 60px; width: auto; }
+
+  .login-card h2 {
+    font-size: 20px;
+    color: #0D3F5F;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .login-card .login-sub {
+    font-size: 13px;
+    color: #4A5568;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .login-field {
+    position: relative;
+    margin-bottom: 18px;
+  }
+
+  .login-field label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #4A5568;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .login-field input {
+    width: 100%;
+    padding: 13px 46px 13px 14px;
+    border: 2px solid #E1E5EC;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #1A202C;
+    background: #F8FAFC;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+  }
+
+  .login-field input:focus {
+    outline: none;
+    border-color: #0D3F5F;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(13, 63, 95, 0.15);
+  }
+
+  .toggle-senha {
+    position: absolute;
+    right: 10px;
+    top: 34px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4A5568;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  .toggle-senha:hover { background: #F4F6FA; }
+
+  .login-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #0D3F5F 0%, #1F3864 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+
+  .login-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(13, 63, 95, 0.35);
+  }
+
+  .login-btn:active { transform: translateY(0); }
+
+  .login-msg {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+    animation: shake 0.4s ease;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+  }
+
+  .login-msg.erro {
+    display: block;
+    background: #FEE2E2;
+    border: 1px solid #FCA5A5;
+    color: #991B1B;
+  }
+
+  .login-msg.erro::before { content: "🚫 "; }
+
+  .login-footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #E1E5EC;
+    text-align: center;
+    font-size: 11px;
+    color: #718096;
+  }
+
+  .login-footer strong { color: #0D3F5F; }
+
+  /* Esconde o app principal até login */
+  .main-app { display: none; }
+  .main-app.authenticated { display: block; }
+</style>
+</head>
+<body data-filtro="todos">
+
+<!-- ===== TELA DE LOGIN ===== -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-bg-arcs">
+    <svg width="600" height="600" viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke-linecap="butt">
+        <path d="M 30 140 Q 40 30 175 28" stroke="#FFFFFF" stroke-width="22"/>
+        <path d="M 62 145 Q 72 60 185 58" stroke="#FFFFFF" stroke-width="20"/>
+        <path d="M 92 150 Q 100 90 195 88" stroke="#FFFFFF" stroke-width="18"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="login-card">
+    <div class="login-logo">
+      <svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Converty">
+        <g fill="none" stroke-linecap="butt">
+          <path d="M 30 140 Q 40 30 175 28" stroke="#3EACE0" stroke-width="22" opacity="0.95"/>
+          <path d="M 62 145 Q 72 60 185 58" stroke="#1E7FB8" stroke-width="20" opacity="0.95"/>
+          <path d="M 92 150 Q 100 90 195 88" stroke="#3EACE0" stroke-width="18" opacity="0.85"/>
+        </g>
+        <text x="165" y="120" font-family="'Segoe UI', Montserrat, Arial, sans-serif"
+              font-size="92" font-weight="800" fill="#0D3F5F" letter-spacing="-3">Converty</text>
+        <text x="538" y="62" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0D3F5F">®</text>
+        <text x="170" y="160" font-family="'Segoe UI', Montserrat, Arial, sans-serif"
+              font-size="22" font-weight="600" fill="#0D3F5F" letter-spacing="4">RECUPERADORA DE ATIVOS</text>
+      </svg>
+    </div>
+
+    <h2>Acesso Restrito</h2>
+    <p class="login-sub">Informe o código de acesso para visualizar o painel processual.</p>
+
+    <form id="loginForm" autocomplete="off">
+      <div class="login-field">
+        <label for="senhaInput">Código de Acesso</label>
+        <input type="password" id="senhaInput" placeholder="••••••••" maxlength="30" autofocus>
+        <button type="button" class="toggle-senha" id="toggleSenha" title="Mostrar/ocultar">👁</button>
+      </div>
+      <button type="submit" class="login-btn">Entrar</button>
+      <div class="login-msg" id="loginMsg"></div>
+    </form>
+
+    <div class="login-footer">
+      <strong>Converty Recuperadora de Ativos</strong><br>
+      Painel Processual · Uso interno autorizado
+    </div>
+  </div>
+</div>
+
+<!-- ===== APP PRINCIPAL (oculto até autenticação) ===== -->
+<div class="main-app" id="mainApp">
+
+<div class="header">
+  <div class="logo-wrap" aria-label="Converty Recuperadora de Ativos">
+    <svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Converty Recuperadora de Ativos">
+      <!-- Arcos concêntricos (swooshes) à esquerda, em tons de azul -->
+      <g fill="none" stroke-linecap="butt">
+        <path d="M 30 140 Q 40 30 175 28" stroke="#3EACE0" stroke-width="22" opacity="0.95"/>
+        <path d="M 62 145 Q 72 60 185 58" stroke="#1E7FB8" stroke-width="20" opacity="0.95"/>
+        <path d="M 92 150 Q 100 90 195 88" stroke="#3EACE0" stroke-width="18" opacity="0.85"/>
+      </g>
+
+      <!-- Texto principal: Converty -->
+      <text x="165" y="120" font-family="'Segoe UI', Montserrat, Arial, sans-serif"
+            font-size="92" font-weight="800" fill="#0D3F5F"
+            letter-spacing="-3">Converty</text>
+
+      <!-- Símbolo de registrado ® -->
+      <text x="538" y="62" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0D3F5F">®</text>
+
+      <!-- Subtítulo: RECUPERADORA DE ATIVOS -->
+      <text x="170" y="160" font-family="'Segoe UI', Montserrat, Arial, sans-serif"
+            font-size="22" font-weight="600" fill="#0D3F5F" letter-spacing="4">RECUPERADORA DE ATIVOS</text>
+    </svg>
+  </div>
+  <div class="titulo-bloco">
+    <h1>Painel de Análise Processual</h1>
+    <div class="subtitulo">
+      Processo nº <strong>5000729-91.2026.8.21.0058</strong> · Execução de Título Extrajudicial<br>
+      1ª Vara Judicial da Comarca de Nova Prata/RS · Atuação pela parte Ativa (Exequente)
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ===== SIDEBAR ===== -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <div class="label">Cliente / Exequente</div>
+      <div class="valor">CRESOL RS</div>
+    </div>
+
+    <div class="filtro-devedor">
+      <div class="label">Filtrar por Devedor</div>
+      <select id="filtroDevedor">
+        <option value="todos">TODOS (Devedor + Avalistas)</option>
+        <option value="aline">Aline A. G. Bregalda (Devedora)</option>
+        <option value="cleiton">Cleiton A. Garda (Avalista)</option>
+        <option value="cristiano">Cristiano A. Garda (Avalista)</option>
+      </select>
+      <div class="filtro-ativo-badge" id="filtroBadge">Visualizando: Todos</div>
+    </div>
+
+    <button class="tab-btn active" data-tab="valor"><span class="num">1</span> Valor da Causa</button>
+    <button class="tab-btn" data-tab="partes"><span class="num">2</span> Partes</button>
+    <button class="tab-btn" data-tab="garantias"><span class="num">3</span> Garantias</button>
+    <button class="tab-btn" data-tab="penhoras"><span class="num">4</span> Penhoras</button>
+    <button class="tab-btn" data-tab="sisbajud"><span class="num">5</span> Bloqueios Sisbajud</button>
+    <button class="tab-btn" data-tab="status"><span class="num">6</span> Status do Andamento</button>
+    <button class="tab-btn" data-tab="cronologia"><span class="num">7</span> Cronologia dos Fatos</button>
+  </nav>
+
+  <!-- ===== CONTEÚDO ===== -->
+  <main class="conteudo">
+
+    <div class="aviso-filtro">
+      ⓘ Filtro ativo: <strong id="avisoNomeDevedor"></strong>. A dívida é <strong>solidária</strong> — todos respondem integralmente pelo valor total.
+    </div>
+
+    <!-- ABA 1: VALOR DA CAUSA -->
+    <div class="tab-panel active" id="valor">
+      <h2>Valor da Causa</h2>
+      <div class="subtitle">Débito atualizado, taxas contratuais e composição dos encargos</div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="label">Débito Atualizado (judicial)</div>
+          <div class="valor">R$ 258.022,10</div>
+          <div class="detalhe">Atualizado em 13/02/2026</div>
+        </div>
+        <div class="card">
+          <div class="label">Débito Atualizado (Converty)</div>
+          <div class="valor">R$ 303.205,50</div>
+          <div class="detalhe">Atualizado em 03/2026</div>
+        </div>
+        <div class="card">
+          <div class="label">Valor Original (CCB)</div>
+          <div class="valor">R$ 190.210,95</div>
+          <div class="detalhe">Liberado em 17/03/2025</div>
+        </div>
+        <div class="card">
+          <div class="label">Custas Processuais</div>
+          <div class="valor">R$ 6.623,19</div>
+          <div class="detalhe">Recolhidas</div>
+        </div>
+      </div>
+
+      <h3>Taxas Aplicadas no Contrato (CCB nº 5003005-2025.006792-6)</h3>
+      <div class="taxas-juros">
+        <div class="taxa-card">
+          <div class="nome">Juros Remuneratórios</div>
+          <div class="percent">2,30% <span style="font-size:14px;">a.m.</span></div>
+          <div class="info">Capitalização mensal<br>Equivale a <strong>~31,37% a.a.</strong></div>
+        </div>
+        <div class="taxa-card">
+          <div class="nome">Juros Moratórios</div>
+          <div class="percent">1,00% <span style="font-size:14px;">a.m.</span></div>
+          <div class="info">Sem capitalização<br>Equivale a <strong>12% a.a.</strong></div>
+        </div>
+        <div class="taxa-card">
+          <div class="nome">Multa Contratual</div>
+          <div class="percent">2,00%</div>
+          <div class="info">Incidência única<br>sobre o valor corrigido</div>
+        </div>
+        <div class="taxa-card">
+          <div class="nome">Correção Monetária</div>
+          <div class="percent">—</div>
+          <div class="info">Não se aplica<br>(conforme contrato)</div>
+        </div>
+      </div>
+
+      <h3>Detalhamento dos Encargos</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Encargo</th>
+            <th>Índice / %</th>
+            <th>Capitalização</th>
+            <th>Termo Inicial</th>
+            <th>Termo Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Juros Remuneratórios</strong></td>
+            <td>2,30% a.m.</td>
+            <td>Mensal</td>
+            <td>Data da liberação do valor na conta (17/03/2025)</td>
+            <td>Data do efetivo pagamento</td>
+          </tr>
+          <tr>
+            <td><strong>Juros Moratórios</strong></td>
+            <td>1,00% a.m.</td>
+            <td>Não se aplica</td>
+            <td>Dia útil seguinte ao primeiro atraso (11/07/2025)</td>
+            <td>Data do efetivo pagamento</td>
+          </tr>
+          <tr>
+            <td><strong>Multa</strong></td>
+            <td>2,00%</td>
+            <td>Não se aplica</td>
+            <td colspan="2">Incidência única sobre valor corrigido + juros principais</td>
+          </tr>
+          <tr>
+            <td><strong>Correção Monetária</strong></td>
+            <td colspan="4">Não se aplica (contratualmente afastada)</td>
+          </tr>
+          <tr>
+            <td><strong>Desconto Obrigatório</strong></td>
+            <td colspan="4">Não se aplica — cálculo feito sobre o valor liberado na conta bancária</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Composição do Débito em Execução (R$ 258.022,10 — Data-base 13/02/2026)</h3>
+      <table>
+        <thead>
+          <tr><th>Componente</th><th>Valor</th><th>Observação</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Saldo Principal Atualizado</td><td><strong>R$ 239.852,59</strong></td><td>Inclui juros remuneratórios de 2,30% a.m. capitalizados</td></tr>
+          <tr><td>Juros Moratórios</td><td><strong>R$ 13.372,46</strong></td><td>1% a.m. desde 11/07/2025</td></tr>
+          <tr><td>Multa Contratual</td><td><strong>R$ 4.797,05</strong></td><td>2% sobre BC de R$ 239.852,59</td></tr>
+          <tr><td>Pagamentos Parciais Abatidos</td><td>-R$ 3.700,61</td><td>R$ 0,61 (19/08/2025) + R$ 3.700,00 (18/12/2025)</td></tr>
+          <tr style="background:var(--azul-claro);font-weight:700;"><td>TOTAL EM EXECUÇÃO</td><td colspan="2">R$ 258.022,10</td></tr>
+        </tbody>
+      </table>
+
+      <div class="destaque alerta">
+        <strong>Observação</strong>
+        O débito atualizado em 03/2026 pela Converty chegou a R$ 303.205,50, considerando os encargos pós-ajuizamento. Para eventual acordo, esse valor passa a ser a referência atual da negociação.
+      </div>
+    </div>
+
+    <!-- ABA 2: PARTES -->
+    <div class="tab-panel" id="partes">
+      <h2>Partes Processuais</h2>
+      <div class="subtitle">Devedora principal e avalistas (responsáveis solidários)</div>
+
+      <div class="destaque">
+        <strong>Responsabilidade Solidária</strong>
+        Os avalistas Cleiton e Cristiano equiparam-se à devedora principal, respondendo integralmente pelo débito nos termos dos arts. 26 e 28 da Lei 10.931/2004.
+      </div>
+
+      <h3>Exequente (Cliente / Credor)</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:180px;background:var(--cinza-bg);font-weight:600;">Razão Social</td>
+            <td>COOPERATIVA DE CRÉDITO E INVESTIMENTO COM INTERAÇÃO SOLIDÁRIA DO RIO GRANDE DO SUL – CRESOL RIO GRANDE DO SUL</td>
+          </tr>
+          <tr><td style="background:var(--cinza-bg);font-weight:600;">CNPJ</td><td>06.139.650/0001-07</td></tr>
+          <tr><td style="background:var(--cinza-bg);font-weight:600;">Procuradora</td><td>Dra. Gabrieli Fontana – OAB/RS 60.762</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Executados (Polo Passivo)</h3>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>CPF</th><th>Contato / Qualificação</th><th>Endereço</th></tr>
+        </thead>
+        <tbody>
+          <tr data-party="aline">
+            <td><strong>ALINE ANTUNES GARDA BREGALDA</strong><br><span style="font-size:11px;color:var(--cinza-texto);">Empregada doméstica, casada<br>(atualmente trabalha com cílios)</span></td>
+            <td>025.829.640-26</td>
+            <td><span class="tag tag-vermelho">Devedora Principal</span><br><span style="font-size:11px;">Emitente da CCB</span><br>📞 (54) 99932-2154<br>📱 (54) 9644-2099 (WhatsApp)</td>
+            <td>R. Prof. Cerilo Borrim, nº 108<br>Guabiju/RS – CEP 95.355-000<br><em style="font-size:11px;color:var(--cinza-texto);">(endereço atualizado em 22/04/2026)</em></td>
+          </tr>
+          <tr data-party="cleiton">
+            <td><strong>CLEITON ANTUNES GARDA</strong><br><span style="font-size:11px;color:var(--cinza-texto);">Montador de estruturas metálicas, solteiro</span></td>
+            <td>031.843.290-03</td>
+            <td><span class="tag tag-amarelo">Avalista</span><br><span style="font-size:11px;">Solidário</span><br>📞 (54) 99935-4175</td>
+            <td>Mesmo endereço de Aline<br>Guabiju/RS</td>
+          </tr>
+          <tr data-party="cristiano">
+            <td><strong>CRISTIANO ANTUNES GARDA</strong><br><span style="font-size:11px;color:var(--cinza-texto);">Diretor de operações comerciais, solteiro</span></td>
+            <td>028.972.600-09</td>
+            <td><span class="tag tag-amarelo">Avalista</span><br><span style="font-size:11px;">Solidário</span><br>📞 (54) 99919-9245</td>
+            <td>R. Dionísio Barbosa Telles, 109<br>Área Industrial – Guabiju/RS</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Pessoas Relacionadas (dados coletados em diligências)</h3>
+      <table>
+        <tbody>
+          <tr data-party="aline">
+            <td style="width:180px;background:var(--cinza-bg);font-weight:600;">Magadiel Bregalda</td>
+            <td>CPF 980.740.320-00 — Cônjuge da devedora Aline. Agricultor. Endereço: Comunidade Linha Paiol Queimado, 9310, interior, CEP 95.365-000, São Jorge-RS.</td>
+          </tr>
+          <tr data-party="aline">
+            <td style="background:var(--cinza-bg);font-weight:600;">Leonardo (irmão de Aline)</td>
+            <td>Contatado em visita realizada em 15/03/2026. Manifestou interesse em realizar acordo em nome da irmã. Relatou que Aline se separou de casamento tóxico e fechou a empresa (atualmente trabalha com cílios).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ABA 3: GARANTIAS -->
+    <div class="tab-panel" id="garantias">
+      <h2>Garantias</h2>
+      <div class="subtitle">Análise de garantias imobiliárias e veiculares</div>
+
+      <div class="destaque negativo">
+        <strong>Garantia Imobiliária</strong>
+        <strong style="color:var(--vermelho);text-transform:none;font-size:15px;">NÃO HÁ</strong>
+        registro de garantia real de imóveis no título executivo. A execução não é lastreada em hipoteca nem em alienação fiduciária de bem imóvel. Foi aberta tarefa interna (25/03/2026) para pesquisa de bens imóveis em nome da devedora, esposo e avalistas.
+      </div>
+
+      <div class="destaque alerta">
+        <strong>Bens Indicados à Penhora na Inicial</strong>
+        A exequente indicou 6 veículos para constrição nos termos do art. 829, §2º, do CPC (com base em pesquisa RENAVAM anexa). Não são gravames originários do título, mas sim indicação de bens penhoráveis identificados na pesquisa.
+      </div>
+
+      <h3>Veículos Indicados à Penhora</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Veículo</th>
+            <th>Placa / RENAVAM</th>
+            <th>Ano/Modelo</th>
+            <th>Cor</th>
+            <th>Proprietário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-party="aline">
+            <td><strong>FIAT/UNO ELECTRONIC</strong></td>
+            <td>LXL3I79<br><span style="font-size:11px;color:var(--cinza-texto);">00540378933</span></td>
+            <td>1993/1994</td>
+            <td>Cinza</td>
+            <td>Aline <span class="tag tag-vermelho">Devedora</span></td>
+          </tr>
+          <tr data-party="aline">
+            <td><strong>VW/GOL CLI 1.8</strong></td>
+            <td>IFH0D88<br><span style="font-size:11px;color:var(--cinza-texto);">00659556740</span></td>
+            <td>1996/1996</td>
+            <td>Vermelha</td>
+            <td>Aline <span class="tag tag-vermelho">Devedora</span></td>
+          </tr>
+          <tr data-party="aline">
+            <td><strong>HONDA CBX 250 TWISTER</strong></td>
+            <td>MFR0C32<br><span style="font-size:11px;color:var(--cinza-texto);">00853400423</span></td>
+            <td>2005/2005</td>
+            <td>Prata</td>
+            <td>Aline <span class="tag tag-vermelho">Devedora</span></td>
+          </tr>
+          <tr data-party="cleiton">
+            <td><strong>VW/GOL S</strong></td>
+            <td>IBR6G36<br><span style="font-size:11px;color:var(--cinza-texto);">00552744751</span></td>
+            <td>1986/1986</td>
+            <td>Verde</td>
+            <td>Cleiton <span class="tag tag-amarelo">Avalista</span></td>
+          </tr>
+          <tr data-party="cristiano">
+            <td><strong>FIAT/UNO MILLE</strong></td>
+            <td>IBH0B07<br><span style="font-size:11px;color:var(--cinza-texto);">00576074063</span></td>
+            <td>1992/1992</td>
+            <td>Cinza</td>
+            <td>Cristiano <span class="tag tag-amarelo">Avalista</span></td>
+          </tr>
+          <tr data-party="cristiano">
+            <td><strong>I/VW GOLF GLX</strong></td>
+            <td>LVH3034<br><span style="font-size:11px;color:var(--cinza-texto);">00155913999</span></td>
+            <td>1995/1995</td>
+            <td>Cinza</td>
+            <td>Cristiano <span class="tag tag-amarelo">Avalista</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="destaque alerta" style="margin-top:20px;">
+        <strong>Observação Estratégica</strong>
+        Todos os veículos são antigos (1986 a 2005), o que impacta a liquidez e o valor de mercado na eventual expropriação. Recomenda-se, quando da efetivação da penhora, avaliação atualizada e análise de custo-benefício da constrição isolada desses bens.
+      </div>
+    </div>
+
+    <!-- ABA 4: PENHORAS -->
+    <div class="tab-panel" id="penhoras">
+      <h2>Penhoras</h2>
+      <div class="subtitle">Situação atual das constrições patrimoniais</div>
+
+      <div class="destaque negativo">
+        <strong>Status Atual</strong>
+        <strong style="color:var(--vermelho);text-transform:none;font-size:15px;">NÃO HÁ PENHORA EFETIVADA</strong> até a presente data (23/04/2026).
+      </div>
+
+      <h3>Autorização Judicial Vigente</h3>
+      <p>
+        A <strong>Decisão do Evento 11 (12/03/2026)</strong>, proferida pela Juíza Ana Lúcia Todeschini Martinez, autorizou expressamente as seguintes providências executórias após o decurso do prazo de 3 dias sem pagamento (art. 829 do CPC):
+      </p>
+
+      <ul class="lista-custom">
+        <li><strong>Penhora e Avaliação</strong> pelo Oficial de Justiça, de bens suficientes para satisfação da obrigação (principal atualizado + custas + honorários).</li>
+        <li><strong>Arresto</strong> (art. 830 do CPC), caso o Oficial de Justiça não encontre o executado para citação.</li>
+        <li><strong>Intimação do cônjuge</strong> em caso de penhora sobre bem imóvel (art. 842 do CPC).</li>
+        <li><strong>Avaliação do bem penhorado</strong> pelo próprio Oficial de Justiça (art. 870 do CPC).</li>
+      </ul>
+
+      <h3>Pedidos Adicionais na Inicial (Pendentes de Deliberação)</h3>
+      <table>
+        <thead>
+          <tr><th style="width:40%;">Pedido</th><th>Status</th><th>Observação</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Indisponibilidade via <strong>CNIB</strong></td>
+            <td><span class="tag tag-amarelo">Pendente</span></td>
+            <td>Aguarda apreciação pós-citação</td>
+          </tr>
+          <tr>
+            <td>Inscrição no <strong>SPC/SERASA</strong></td>
+            <td><span class="tag tag-amarelo">Pendente</span></td>
+            <td>Condicionado ao não pagamento</td>
+          </tr>
+          <tr>
+            <td>Multa de 20% sobre o débito (art. 774 do CPC)</td>
+            <td><span class="tag tag-amarelo">Pendente</span></td>
+            <td>Caso não apresentem relação de bens</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ABA 5: SISBAJUD -->
+    <div class="tab-panel" id="sisbajud">
+      <h2>Bloqueios Sisbajud</h2>
+      <div class="subtitle">Situação do bloqueio de ativos financeiros</div>
+
+      <div class="destaque negativo">
+        <strong>Status Atual</strong>
+        <strong style="color:var(--vermelho);text-transform:none;font-size:15px;">NÃO HOUVE BLOQUEIO VIA SISBAJUD</strong> até a presente data.
+      </div>
+
+      <h3>Pedido Formulado na Inicial</h3>
+      <p>A exequente, no <strong>item 8 dos pedidos da petição inicial</strong>, requereu expressamente:</p>
+      <div class="destaque">
+        <em>"Não apresentada a relação de bens, sendo estes de difícil comercialização ou em desobediência à gradação legal (art. 835 do CPC), requer-se desde logo a penhora dos ativos e aplicações financeiras em nome dos Executados, a ser realizada por meios eletrônicos (Sisbajud)."</em>
+      </div>
+
+      <h3>Análise</h3>
+      <p>O pedido foi formulado de forma <strong>subsidiária</strong> — dependente do não atendimento pelos executados do dever de apresentar relação de bens passíveis de penhora no prazo de 5 dias.</p>
+      <p>A Decisão de Citação (Ev. 11) <strong>não deferiu o Sisbajud de imediato</strong>, pois a fase processual atual é de CITAÇÃO DOS EXECUTADOS. Apenas após o exaurimento do prazo de pagamento (3 dias) sem solução é que o pedido de Sisbajud deverá ser reiterado e apreciado pelo Juízo.</p>
+
+      <div class="destaque alerta">
+        <strong>Recomendação Estratégica</strong>
+        Assim que cumpridos os mandados de citação e decorrido o prazo sem pagamento, peticionar reiterando o pedido de bloqueio via Sisbajud e CNIB, com indicação atualizada do valor em execução.
+      </div>
+    </div>
+
+    <!-- ABA 6: STATUS -->
+    <div class="tab-panel" id="status">
+      <h2>Status do Andamento Processual</h2>
+      <div class="subtitle">Fase atual e linha do tempo dos atos processuais</div>
+
+      <div class="destaque">
+        <strong>Fase Atual</strong>
+        <strong style="color:var(--azul-escuro);text-transform:none;font-size:15px;">INICIAL — Aguardando expedição de mandado de citação no endereço atualizado</strong>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="label">Dias desde a Distribuição</div>
+          <div class="valor">69</div>
+          <div class="detalhe">Desde 13/02/2026</div>
+        </div>
+        <div class="card">
+          <div class="label">Eventos registrados</div>
+          <div class="valor">20+</div>
+          <div class="detalhe">Último ato: 22/04/2026</div>
+        </div>
+        <div class="card">
+          <div class="label">Executados Citados</div>
+          <div class="valor">0 de 3</div>
+          <div class="detalhe">Citação pendente</div>
+        </div>
+      </div>
+
+      <h3>Linha do Tempo dos Atos Processuais</h3>
+      <div class="timeline">
+        <div class="timeline-item processual">
+          <div class="data">13/02/2026 · Evento 1</div>
+          <div class="titulo">Distribuição — Petição Inicial</div>
+          <div class="descricao">Protocolo da Execução de Título Extrajudicial (CCB), com indicação de bens à penhora (6 veículos) e requerimento subsidiário de Sisbajud, CNIB e inscrição em SPC/SERASA. Valor de R$ 258.022,10.</div>
+        </div>
+        <div class="timeline-item processual">
+          <div class="data">19/02/2026 · Evento 4</div>
+          <div class="titulo">Despacho — Intimação para custas</div>
+          <div class="descricao">Juíza Ana Lúcia Todeschini Martinez determinou a intimação da parte autora para pagamento das custas iniciais (prazo 15 dias), sob pena de cancelamento da distribuição.</div>
+        </div>
+        <div class="timeline-item processual">
+          <div class="data">12/03/2026 · Evento 11</div>
+          <div class="titulo">Decisão — Citação Deferida</div>
+          <div class="descricao">Após recolhimento das custas, o Juízo deferiu a citação dos executados para pagamento em 3 dias, fixando honorários em 10% (reduzidos à metade em caso de pagamento integral). Autorizada a penhora/avaliação pelo Oficial de Justiça e o arresto caso os executados não sejam encontrados.</div>
+        </div>
+        <div class="timeline-item processual">
+          <div class="data">26/03/2026 · Evento 16</div>
+          <div class="titulo">Ato Ordinatório — Esclarecimento de endereço</div>
+          <div class="descricao">Cartório intimou a exequente para esclarecer o endereço da executada Aline (Rua B, Promorar, 108), pois não foi possível cadastrá-lo no sistema Eproc. Também determinou o recolhimento de 2 despesas de condução rural por mandado (Oficial de Justiça – Nova Prata).</div>
+        </div>
+        <div class="timeline-item atual">
+          <div class="data">22/04/2026 · Evento 20 <span class="tag tag-azul">Último ato</span></div>
+          <div class="titulo">Petição da Exequente — Endereço Atualizado</div>
+          <div class="descricao">A Dra. Gabrieli Fontana informou ao Juízo o endereço atualizado da executada Aline (R. Prof. Cerilo Borrim, nº 108, Guabiju/RS – CEP 95355-000) e requereu o regular prosseguimento do feito, com expedição de mandado de citação no novo endereço.</div>
+        </div>
+      </div>
+
+      <h3>Próximos Passos Esperados</h3>
+      <ul class="lista-custom">
+        <li>Decisão judicial acolhendo o endereço atualizado e determinando a expedição de mandado de citação da executada Aline.</li>
+        <li>Recolhimento das despesas de condução rural do Oficial de Justiça (2 despesas por mandado).</li>
+        <li>Cumprimento dos mandados de citação dos 3 executados.</li>
+        <li>Decurso do prazo de 3 dias para pagamento (art. 829 do CPC).</li>
+        <li>Não havendo pagamento: efetivação de penhora / arresto dos veículos indicados, e/ou requerimento subsidiário de Sisbajud e CNIB.</li>
+        <li>Acompanhamento de eventuais Embargos à Execução (prazo de 15 dias — sem efeito suspensivo automático, art. 919 do CPC).</li>
+      </ul>
+    </div>
+
+    <!-- ABA 7: CRONOLOGIA DOS FATOS -->
+    <div class="tab-panel" id="cronologia">
+      <h2>Cronologia dos Fatos</h2>
+      <div class="subtitle">Histórico de acionamentos, diligências e contatos com a devedora e avalistas (Base de Eventos Converty)</div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="label">Total de Acionamentos</div>
+          <div class="valor">09</div>
+          <div class="detalhe">Desde 19/12/2025</div>
+        </div>
+        <div class="card">
+          <div class="label">Operadores Envolvidos</div>
+          <div class="valor">04</div>
+          <div class="detalhe">Aline T., Andressa S., Fabio, AUTO</div>
+        </div>
+        <div class="card">
+          <div class="label">Tipo Predominante</div>
+          <div class="valor">PESQUISA</div>
+          <div class="detalhe">+ Cobrança Judicial + Visita</div>
+        </div>
+      </div>
+
+      <h3>Legenda</h3>
+      <p style="font-size:12px;">
+        <span class="tag tag-azul">Processual</span> atos ligados ao processo judicial &nbsp;
+        <span class="tag tag-roxo">Pesquisa</span> pesquisas cadastrais e patrimoniais &nbsp;
+        <span class="tag tag-verde">Contato</span> contato direto com devedora/avalistas/terceiros &nbsp;
+        <span class="tag tag-amarelo">Interno</span> tratativas internas
+      </p>
+
+      <h3>Linha do Tempo Completa</h3>
+      <div class="timeline">
+
+        <div class="timeline-item pesquisa" data-party="aline cleiton cristiano all">
+          <div class="data">19/12/2025 · 10:47 <span class="tag tag-roxo">Pesquisa</span></div>
+          <div class="titulo">701 CRVA — Resultado Positivo</div>
+          <div class="meta">Operadora: Aline Tumelero · Evento automático (CONJUD)</div>
+          <div class="descricao">Busca realizada pelo credor, com retorno positivo para a devedora <strong>e os avalistas Cleiton e Cristiano</strong>. Pedido CRVA enviado (703 CRVA PEDIDO ENVIADO) — primeiro marco do acionamento.</div>
+        </div>
+
+        <div class="timeline-item interno" data-party="aline cleiton cristiano all">
+          <div class="data">19/12/2025 · 10:50 <span class="tag tag-amarelo">Interno</span></div>
+          <div class="titulo">820 JUD — Aguarda Documentos</div>
+          <div class="meta">Operadora: Aline Tumelero</div>
+          <div class="descricao">Solicitada a documentação faltante via Fluid para instrução da demanda judicial.</div>
+        </div>
+
+        <div class="timeline-item contato" data-party="aline">
+          <div class="data">15/03/2026 <span class="tag tag-verde">Contato</span></div>
+          <div class="titulo">Visita ao irmão Leonardo (relacionado a Aline)</div>
+          <div class="meta">Operador: Fabio · Registrado por Andressa Santos</div>
+          <div class="descricao">Realizada visita ao irmão Leonardo, que relatou: (i) Aline <strong>se separou de um casamento tóxico</strong>; (ii) atualmente <strong>trabalha com cílios</strong>; (iii) <strong>fechou a empresa</strong> anterior; (iv) <strong>demonstrou interesse em acordo</strong> em nome da irmã. Informação estratégica para aproximação conciliatória.</div>
+        </div>
+
+        <div class="timeline-item contato" data-party="aline">
+          <div class="data">18/03/2026 · 16:06 <span class="tag tag-verde">Contato</span></div>
+          <div class="titulo">688 WhatsApp — Mensagem Enviada</div>
+          <div class="meta">Operadora: Andressa Santos</div>
+          <div class="descricao">Contato realizado pelo WhatsApp da devedora (<strong>54 9644-2099</strong>): chamada iniciada e questionamento sobre interesse em regularizar o débito. Canal aberto para negociação.</div>
+        </div>
+
+        <div class="timeline-item processual" data-party="aline cleiton cristiano all">
+          <div class="data">25/03/2026 · 08:59 <span class="tag tag-azul">Processual</span></div>
+          <div class="titulo">090 AJUIZAMENTO / ATUALIZAÇÃO DE FASE</div>
+          <div class="meta">Operadora: Andressa Santos</div>
+          <div class="descricao">
+            Atualização consolidada do andamento processual:<br><br>
+            <strong>Processo:</strong> 5000729-91.2026.8.21.0058<br>
+            <strong>Partes:</strong> Aline (54 99932-2154), Cleiton (CPF 031.843.290-03, 54 99935-4175) e Cristiano (CPF 028.972.600-09, 54 99919-9245).<br>
+            <strong>Capital:</strong> R$ 186.510,34 · <strong>Custas:</strong> R$ 6.623,19<br>
+            <strong>Data do Ajuizamento:</strong> 13/02/2026 · <strong>Atualizado em 03/2026:</strong> R$ 303.205,50<br>
+            <strong>Bens indicados à penhora:</strong> FIAT/UNO ELECTRONIC LXL3I79, VW/GOL CLI 1.8 IFH0D88, HONDA CBX 250 TWISTER MFR0C32 (Aline); VW/GOL S IBR6G36 (Cleiton); FIAT/UNO MILLE IBH0B07 e I/VW GOLF GLX LVH3034 (Cristiano).<br>
+            <strong>Citação determinada em 12/03/2026.</strong><br>
+            <em>Observação:</em> Dados do marido da devedora — Magadiel Bregalda, CPF 980.740.320-00, agricultor, Comunidade Linha Paiol Queimado, 9310, CEP 95.365-000, São Jorge-RS.
+          </div>
+        </div>
+
+        <div class="timeline-item interno" data-party="aline cleiton cristiano all">
+          <div class="data">25/03/2026 · 09:13 <span class="tag tag-amarelo">Interno</span></div>
+          <div class="titulo">111 COB JUDICIAL — Busca de Imóveis</div>
+          <div class="meta">Operadora: Andressa Santos</div>
+          <div class="descricao">Aberta tarefa para a colega <strong>Marina</strong> realizar buscas de bens imóveis em nome da devedora, do esposo (Magadiel) e dos avalistas Cleiton e Cristiano.</div>
+        </div>
+
+        <div class="timeline-item interno" data-party="aline cleiton cristiano all">
+          <div class="data">27/03/2026 · 15:25 <span class="tag tag-amarelo">Interno</span></div>
+          <div class="titulo">800 INTERNO — Tratativas com o Judicial</div>
+          <div class="meta">Operadora: Andressa Santos · Solicitação de Fabio Scheid</div>
+          <div class="descricao">Comunicado ao João por e-mail: "conforme solicitação do Fabio Scheid, enviei print e documentação no WhatsApp do Judicial, prazo para que tente, de alguma maneira, comprovar que a devedora está <strong>ocultando bens</strong>".</div>
+        </div>
+
+        <div class="timeline-item pesquisa" data-party="aline cleiton cristiano all">
+          <div class="data">30/03/2026 · 14:32 <span class="tag tag-roxo">Pesquisa</span></div>
+          <div class="titulo">111 COB JUDICIAL — Pesquisa de Procurações Públicas</div>
+          <div class="meta">Operadora: Andressa Santos</div>
+          <div class="descricao">Solicitação de pesquisa de <strong>PROCURAÇÕES PÚBLICAS</strong> em nome de: Aline Antunes Garda Bregalda (CPF 025.829.640-26), Cleiton Antunes Garda (CPF 031.843.290-03), Cristiano Antunes Garda (CPF 028.972.600-09) e Magadiel Bregalda (CPF 980.740.320-00), junto à Comarca de Guabiju/RS (CEP 95355-000) e à região de todo o RS, a fim de instruir a demanda.</div>
+        </div>
+
+      </div>
+
+      <div class="destaque positivo">
+        <strong>Insight Estratégico</strong>
+        Há claros sinais de abertura para composição amigável: (i) o irmão Leonardo demonstrou interesse em acordo; (ii) mudanças recentes na vida pessoal e profissional de Aline indicam momento de recomeço. Recomenda-se aproximação conciliatória focada, eventualmente envolvendo o irmão como ponte e o WhatsApp (54 9644-2099) como canal — mantendo simultaneamente a pressão processual (citação + penhora de veículos + Sisbajud + investigação sobre eventual ocultação de bens).
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</div>
+<!-- ===== FIM DO APP ===== -->
+
+<script>
+  // ===== LOGIN =====
+  const SENHA_CORRETA = "PPR2026";
+  const loginScreen = document.getElementById('loginScreen');
+  const mainApp = document.getElementById('mainApp');
+  const loginForm = document.getElementById('loginForm');
+  const senhaInput = document.getElementById('senhaInput');
+  const loginMsg = document.getElementById('loginMsg');
+  const toggleSenha = document.getElementById('toggleSenha');
+
+  let tentativas = 0;
+
+  toggleSenha.addEventListener('click', () => {
+    if (senhaInput.type === 'password') {
+      senhaInput.type = 'text';
+      toggleSenha.textContent = '🙈';
+    } else {
+      senhaInput.type = 'password';
+      toggleSenha.textContent = '👁';
+    }
+  });
+
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const valor = senhaInput.value.trim();
+
+    if (valor === SENHA_CORRETA) {
+      loginMsg.classList.remove('erro');
+      loginMsg.style.display = 'none';
+      loginScreen.classList.add('hidden');
+      mainApp.classList.add('authenticated');
+    } else {
+      tentativas++;
+      loginMsg.className = 'login-msg erro';
+      if (valor === '') {
+        loginMsg.textContent = 'Informe o código de acesso.';
+      } else {
+        loginMsg.textContent = 'ACESSO NEGADO — Código incorreto. Tentativa ' + tentativas + '.';
+      }
+      senhaInput.value = '';
+      senhaInput.focus();
+      // Reaplica a animação de shake
+      loginMsg.style.animation = 'none';
+      void loginMsg.offsetWidth;
+      loginMsg.style.animation = '';
+    }
+  });
+
+  // ===== Troca de abas =====
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(target).classList.add('active');
+      document.querySelector('.conteudo').scrollTop = 0;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // ===== Filtro de devedor =====
+  const filtro = document.getElementById('filtroDevedor');
+  const badge = document.getElementById('filtroBadge');
+  const avisoNome = document.getElementById('avisoNomeDevedor');
+
+  const rotulos = {
+    todos: 'Todos (Devedor + Avalistas)',
+    aline: 'Aline A. G. Bregalda (Devedora Principal)',
+    cleiton: 'Cleiton A. Garda (Avalista)',
+    cristiano: 'Cristiano A. Garda (Avalista)'
+  };
+
+  filtro.addEventListener('change', (e) => {
+    const v = e.target.value;
+    document.body.dataset.filtro = v;
+    avisoNome.textContent = rotulos[v];
+    if (v === 'todos') {
+      badge.classList.remove('show');
+    } else {
+      badge.classList.add('show');
+      badge.textContent = 'Filtrando: ' + rotulos[v];
+    }
+  });
+</script>
+
+</body>
+</html>

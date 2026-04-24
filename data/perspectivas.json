@@ -1,0 +1,1687 @@
+{
+  "gerado_em": "23/04/2026",
+  "metodologia": {
+    "score_max": 140,
+    "componentes": {
+      "tempo_no_rito": "Meses desde autuação (≥18m:+25, 12-18:+18, 6-12:+12, 3-6:+6)",
+      "garantia": "Hipoteca:+30 | Alienação Fiduciária:+25 | Penhor:+18 | Aval:+8 | Sem:0",
+      "sisbajud": "Já bloqueado >R$20k:+30 | >R$5k:+22 | >0:+14 | sem:0",
+      "sinais_defesa": "Defesa forte (embargos/impugnação/agravo alto):-20 a 0",
+      "sinais_acordo": "Proposta/acordo/parcelamento identificado:+12 a +20",
+      "penhora_leilao": "Leilão designado:+25, Penhora efetuada:+15"
+    },
+    "probabilidade": {
+      ">=80": "35%",
+      "60-80": "22%",
+      "40-60": "13%",
+      "20-40": "7%",
+      "<20": "3%"
+    },
+    "premissas": [
+      "Viés conservador: probabilidade máxima 35%.",
+      "Distribuição mensal por tipo (Acordo cedo, Excussão tarde).",
+      "Valor base: valor da causa por processo.",
+      "Modelo indicativo — sujeito a validação jurídica e negociações em curso."
+    ]
+  },
+  "meses": [
+    {
+      "chave": "2026-05",
+      "label": "Mai/26",
+      "valor": 62999.28,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-06",
+      "label": "Jun/26",
+      "valor": 86134.98,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-07",
+      "label": "Jul/26",
+      "valor": 94505.28,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-08",
+      "label": "Ago/26",
+      "valor": 106066.46,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-09",
+      "label": "Set/26",
+      "valor": 108887.45,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-10",
+      "label": "Out/26",
+      "valor": 111464.05,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-11",
+      "label": "Nov/26",
+      "valor": 94135.61,
+      "qtd_processos": 44
+    },
+    {
+      "chave": "2026-12",
+      "label": "Dez/26",
+      "valor": 69427.24,
+      "qtd_processos": 44
+    }
+  ],
+  "por_tipo": [
+    {
+      "tipo": "Leilão / Adjudicação",
+      "valor": 249067.76,
+      "qtd": 2
+    },
+    {
+      "tipo": "Acordo Extrajudicial",
+      "valor": 210271.39,
+      "qtd": 26
+    },
+    {
+      "tipo": "Penhora / Avaliação",
+      "valor": 154043.47,
+      "qtd": 6
+    },
+    {
+      "tipo": "Sisbajud (renovação)",
+      "valor": 75555.39,
+      "qtd": 4
+    },
+    {
+      "tipo": "Penhora / Sisbajud",
+      "valor": 35133.98,
+      "qtd": 4
+    },
+    {
+      "tipo": "Acordo",
+      "valor": 9548.36,
+      "qtd": 2
+    }
+  ],
+  "por_devedor": [
+    {
+      "devedor": "ATRIA AGRO TECNICA LTDA",
+      "valor": 235831.95,
+      "qtd": 2,
+      "tipos": [
+        "Leilão / Adjudicação",
+        "Penhora / Sisbajud"
+      ]
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "valor": 58477.28,
+      "qtd": 6,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "valor": 58356.67,
+      "qtd": 8,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    },
+    {
+      "devedor": "ROSANIO ZANCO",
+      "valor": 51069.17,
+      "qtd": 1,
+      "tipos": [
+        "Penhora / Avaliação"
+      ]
+    },
+    {
+      "devedor": "LUIZ FELIPE MIORANDO",
+      "valor": 50916.49,
+      "qtd": 1,
+      "tipos": [
+        "Penhora / Avaliação"
+      ]
+    },
+    {
+      "devedor": "FABIO JOSE PEDROSO",
+      "valor": 46556.29,
+      "qtd": 3,
+      "tipos": [
+        "Acordo Extrajudicial",
+        "Sisbajud (renovação)"
+      ]
+    },
+    {
+      "devedor": "AUSTRAL AGRICOLA LTDA",
+      "valor": 28735.64,
+      "qtd": 1,
+      "tipos": [
+        "Penhora / Sisbajud"
+      ]
+    },
+    {
+      "devedor": "JENE COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+      "valor": 26718.35,
+      "qtd": 2,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    },
+    {
+      "devedor": "LUANNTUR TURISMO LTDA",
+      "valor": 26078.98,
+      "qtd": 1,
+      "tipos": [
+        "Penhora / Avaliação"
+      ]
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "valor": 26016.14,
+      "qtd": 6,
+      "tipos": [
+        "Acordo",
+        "Acordo Extrajudicial",
+        "Penhora / Sisbajud"
+      ]
+    },
+    {
+      "devedor": "JOAO JOEL RIBEIRO",
+      "valor": 23679.71,
+      "qtd": 1,
+      "tipos": [
+        "Sisbajud (renovação)"
+      ]
+    },
+    {
+      "devedor": "EMANUELA ALIPRANDINI",
+      "valor": 20406.0,
+      "qtd": 1,
+      "tipos": [
+        "Sisbajud (renovação)"
+      ]
+    },
+    {
+      "devedor": "ALINE ANTUNES GARDA BREGALDA",
+      "valor": 18061.55,
+      "qtd": 1,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    },
+    {
+      "devedor": "A2 MOVEIS LTDA",
+      "valor": 14893.78,
+      "qtd": 2,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    },
+    {
+      "devedor": "FERNANDO PIGOZZO",
+      "valor": 14384.76,
+      "qtd": 1,
+      "tipos": [
+        "Leilão / Adjudicação"
+      ]
+    },
+    {
+      "devedor": "GRAZIELA DE ALMEIDA CALEGARI",
+      "valor": 14152.05,
+      "qtd": 1,
+      "tipos": [
+        "Penhora / Avaliação"
+      ]
+    },
+    {
+      "devedor": "ADILSON CARLOS AUTOMOVEIS",
+      "valor": 11826.78,
+      "qtd": 2,
+      "tipos": [
+        "Penhora / Avaliação"
+      ]
+    },
+    {
+      "devedor": "CLEBER ALVES",
+      "valor": 4468.38,
+      "qtd": 2,
+      "tipos": [
+        "Acordo Extrajudicial",
+        "Sisbajud (renovação)"
+      ]
+    },
+    {
+      "devedor": "RUBY DESIGNER EM ESTOFADOS LTDA",
+      "valor": 1647.92,
+      "qtd": 1,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    },
+    {
+      "devedor": "PAULO MATTIELLO",
+      "valor": 1342.46,
+      "qtd": 1,
+      "tipos": [
+        "Acordo Extrajudicial"
+      ]
+    }
+  ],
+  "processos": [
+    {
+      "devedor": "LUIZ FELIPE MIORANDO",
+      "processo": "5000388-28.2026.8.21.0135",
+      "comarca": "Juízo do Núcleo de Justiça 4.0 de Busca e Apreensão de Veículos Automotores",
+      "classe": "BUSCA E APREENSÃO EM ALIENAÇÃO FIDUCIÁRIA",
+      "valor_causa": 727378.41,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Alienação Fiduciária, Aval",
+      "meses_no_rito": 2,
+      "score": {
+        "tempo": 0,
+        "garantia": 25,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 0,
+        "penhora": 14,
+        "total": 39
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Penhora / Avaliação",
+      "valor_esperado": 50916.49,
+      "distribuicao_mensal": {
+        "2026-05": 2545.8245,
+        "2026-06": 5091.649,
+        "2026-07": 6109.9788,
+        "2026-08": 7637.473499999999,
+        "2026-09": 7637.473499999999,
+        "2026-10": 7637.473499999999,
+        "2026-11": 7637.473499999999,
+        "2026-12": 6619.1437
+      }
+    },
+    {
+      "devedor": "ATRIA AGRO TECNICA LTDA",
+      "processo": "5000595-98.2025.8.21.0058",
+      "comarca": "Juízo da 2ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 670522.87,
+      "sisbajud_bloqueado": 28530.63,
+      "garantia": "Aval",
+      "meses_no_rito": 14,
+      "score": {
+        "tempo": 18,
+        "garantia": 8,
+        "sisbajud": 30,
+        "defesa": -12,
+        "acordo": 12,
+        "penhora": 29,
+        "total": 85
+      },
+      "probabilidade": 0.35,
+      "tipo_previsao": "Leilão / Adjudicação",
+      "valor_esperado": 234683.0,
+      "distribuicao_mensal": {
+        "2026-05": 4693.66,
+        "2026-06": 11734.150000000001,
+        "2026-07": 18774.64,
+        "2026-08": 35202.45,
+        "2026-09": 46936.600000000006,
+        "2026-10": 51630.26,
+        "2026-11": 42242.939999999995,
+        "2026-12": 23468.300000000003
+      }
+    },
+    {
+      "devedor": "ATRIA AGRO TECNICA LTDA",
+      "processo": "5000625-36.2025.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 8838.1,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 14,
+      "score": {
+        "tempo": 18,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 52
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Penhora / Sisbajud",
+      "valor_esperado": 1148.95,
+      "distribuicao_mensal": {
+        "2026-05": 91.91600000000001,
+        "2026-06": 160.853,
+        "2026-07": 183.83200000000002,
+        "2026-08": 183.83200000000002,
+        "2026-09": 160.853,
+        "2026-10": 137.874,
+        "2026-11": 114.89500000000001,
+        "2026-12": 114.89500000000001
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5001034-76.2026.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 8171.98,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 30
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 572.04,
+      "distribuicao_mensal": {
+        "2026-05": 102.96719999999999,
+        "2026-06": 102.96719999999999,
+        "2026-07": 91.5264,
+        "2026-08": 68.64479999999999,
+        "2026-09": 57.204,
+        "2026-10": 57.204,
+        "2026-11": 45.7632,
+        "2026-12": 45.7632
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5002628-62.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 67680.92,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 9,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 46
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 8798.52,
+      "distribuicao_mensal": {
+        "2026-05": 1583.7336,
+        "2026-06": 1583.7336,
+        "2026-07": 1407.7632,
+        "2026-08": 1055.8224,
+        "2026-09": 879.8520000000001,
+        "2026-10": 879.8520000000001,
+        "2026-11": 703.8816,
+        "2026-12": 703.8816
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5002874-58.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 115636.15,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 46
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 15032.7,
+      "distribuicao_mensal": {
+        "2026-05": 2705.886,
+        "2026-06": 2705.886,
+        "2026-07": 2405.232,
+        "2026-08": 1803.924,
+        "2026-09": 1503.2700000000002,
+        "2026-10": 1503.2700000000002,
+        "2026-11": 1202.616,
+        "2026-12": 1202.616
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5003028-76.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 167595.43,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -5,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 41
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 17469.17,
+      "distribuicao_mensal": {
+        "2026-05": 3144.4505999999997,
+        "2026-06": 3144.4505999999997,
+        "2026-07": 2795.0672,
+        "2026-08": 2096.3003999999996,
+        "2026-09": 1746.917,
+        "2026-10": 1746.917,
+        "2026-11": 1397.5336,
+        "2026-12": 1397.5336
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5003190-71.2025.8.21.0090",
+      "comarca": "Juízo do Núcleo de Justiça 4.0 de Busca e Apreensão de Veículos Automotores",
+      "classe": "BUSCA E APREENSÃO EM ALIENAÇÃO FIDUCIÁRIA",
+      "valor_causa": 94335.75,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 42
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 12263.65,
+      "distribuicao_mensal": {
+        "2026-05": 2207.457,
+        "2026-06": 2207.457,
+        "2026-07": 1962.184,
+        "2026-08": 1471.638,
+        "2026-09": 1226.365,
+        "2026-10": 1226.365,
+        "2026-11": 981.092,
+        "2026-12": 981.092
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5004473-32.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 5306.92,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 5,
+      "score": {
+        "tempo": 6,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 28
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 371.48,
+      "distribuicao_mensal": {
+        "2026-05": 66.8664,
+        "2026-06": 66.8664,
+        "2026-07": 59.436800000000005,
+        "2026-08": 44.577600000000004,
+        "2026-09": 37.148,
+        "2026-10": 37.148,
+        "2026-11": 29.718400000000003,
+        "2026-12": 29.718400000000003
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5005326-35.2026.8.21.7000",
+      "comarca": "Gab. Des. Andre Luiz Planella Villarinho",
+      "classe": "Agravo de Instrumento",
+      "valor_causa": 94335.75,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 3,
+      "score": {
+        "tempo": 6,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 0,
+        "penhora": 14,
+        "total": 16
+      },
+      "probabilidade": 0.03,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 2830.07,
+      "distribuicao_mensal": {
+        "2026-05": 509.4126,
+        "2026-06": 509.4126,
+        "2026-07": 452.81120000000004,
+        "2026-08": 339.6084,
+        "2026-09": 283.007,
+        "2026-10": 283.007,
+        "2026-11": 226.40560000000002,
+        "2026-12": 226.40560000000002
+      }
+    },
+    {
+      "devedor": "ELEANDRA TAPPARO DE LIMA",
+      "processo": "5360219-34.2025.8.21.7000",
+      "comarca": "Gab. Des. Andre Luiz Planella Villarinho",
+      "classe": "Agravo de Instrumento",
+      "valor_causa": 0.0,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 5,
+      "score": {
+        "tempo": 6,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 36
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 1019.04,
+      "distribuicao_mensal": {
+        "2026-05": 183.4272,
+        "2026-06": 183.4272,
+        "2026-07": 163.0464,
+        "2026-08": 122.28479999999999,
+        "2026-09": 101.904,
+        "2026-10": 101.904,
+        "2026-11": 81.5232,
+        "2026-12": 81.5232
+      }
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "processo": "5001034-76.2026.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 8171.98,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 30
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 572.04,
+      "distribuicao_mensal": {
+        "2026-05": 102.96719999999999,
+        "2026-06": 102.96719999999999,
+        "2026-07": 91.5264,
+        "2026-08": 68.64479999999999,
+        "2026-09": 57.204,
+        "2026-10": 57.204,
+        "2026-11": 45.7632,
+        "2026-12": 45.7632
+      }
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "processo": "5002874-58.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 115636.15,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 46
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 15032.7,
+      "distribuicao_mensal": {
+        "2026-05": 2705.886,
+        "2026-06": 2705.886,
+        "2026-07": 2405.232,
+        "2026-08": 1803.924,
+        "2026-09": 1503.2700000000002,
+        "2026-10": 1503.2700000000002,
+        "2026-11": 1202.616,
+        "2026-12": 1202.616
+      }
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "processo": "5002994-04.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "MONITÓRIA",
+      "valor_causa": 64999.99,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 42
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 8450.0,
+      "distribuicao_mensal": {
+        "2026-05": 1521.0,
+        "2026-06": 1521.0,
+        "2026-07": 1352.0,
+        "2026-08": 1014.0,
+        "2026-09": 845.0,
+        "2026-10": 845.0,
+        "2026-11": 676.0,
+        "2026-12": 676.0
+      }
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "processo": "5003028-76.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 167595.43,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -5,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 41
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 21787.41,
+      "distribuicao_mensal": {
+        "2026-05": 3921.7338,
+        "2026-06": 3921.7338,
+        "2026-07": 3485.9856,
+        "2026-08": 2614.4892,
+        "2026-09": 2178.741,
+        "2026-10": 2178.741,
+        "2026-11": 1742.9928,
+        "2026-12": 1742.9928
+      }
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "processo": "5003190-71.2025.8.21.0090",
+      "comarca": "Juízo do Núcleo de Justiça 4.0 de Busca e Apreensão de Veículos Automotores",
+      "classe": "BUSCA E APREENSÃO EM ALIENAÇÃO FIDUCIÁRIA",
+      "valor_causa": 94335.75,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 42
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 12263.65,
+      "distribuicao_mensal": {
+        "2026-05": 2207.457,
+        "2026-06": 2207.457,
+        "2026-07": 1962.184,
+        "2026-08": 1471.638,
+        "2026-09": 1226.365,
+        "2026-10": 1226.365,
+        "2026-11": 981.092,
+        "2026-12": 981.092
+      }
+    },
+    {
+      "devedor": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "processo": "5004473-32.2025.8.21.0090",
+      "comarca": "Juízo da Vara Judicial da Comarca de Casca",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 5306.92,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 5,
+      "score": {
+        "tempo": 6,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 28
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 371.48,
+      "distribuicao_mensal": {
+        "2026-05": 66.8664,
+        "2026-06": 66.8664,
+        "2026-07": 59.436800000000005,
+        "2026-08": 44.577600000000004,
+        "2026-09": 37.148,
+        "2026-10": 37.148,
+        "2026-11": 29.718400000000003,
+        "2026-12": 29.718400000000003
+      }
+    },
+    {
+      "devedor": "FABIO JOSE PEDROSO",
+      "processo": "5000249-21.2026.8.21.0121",
+      "comarca": "Juízo da Vara Judicial da Comarca de Santa Bárbara do Sul",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 33420.46,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 3,
+      "score": {
+        "tempo": 6,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 40
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 4344.66,
+      "distribuicao_mensal": {
+        "2026-05": 782.0387999999999,
+        "2026-06": 782.0387999999999,
+        "2026-07": 695.1456,
+        "2026-08": 521.3592,
+        "2026-09": 434.466,
+        "2026-10": 434.466,
+        "2026-11": 347.5728,
+        "2026-12": 347.5728
+      }
+    },
+    {
+      "devedor": "FABIO JOSE PEDROSO",
+      "processo": "5001249-90.2025.8.21.0121",
+      "comarca": "Juízo da Vara Judicial da Comarca de Santa Bárbara do Sul",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 211058.16,
+      "sisbajud_bloqueado": 2353.22,
+      "garantia": "Aval",
+      "meses_no_rito": 9,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 14,
+        "defesa": -5,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 55
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Sisbajud (renovação)",
+      "valor_esperado": 27437.56,
+      "distribuicao_mensal": {
+        "2026-05": 2743.7560000000003,
+        "2026-06": 4938.7608,
+        "2026-07": 5487.512000000001,
+        "2026-08": 4938.7608,
+        "2026-09": 3292.5072,
+        "2026-10": 2743.7560000000003,
+        "2026-11": 1920.6292000000003,
+        "2026-12": 1371.8780000000002
+      }
+    },
+    {
+      "devedor": "FABIO JOSE PEDROSO",
+      "processo": "5001525-24.2025.8.21.0121",
+      "comarca": "Juízo da Vara Judicial da Comarca de Santa Bárbara do Sul",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 211058.16,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -20,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 34
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 14774.07,
+      "distribuicao_mensal": {
+        "2026-05": 2659.3325999999997,
+        "2026-06": 2659.3325999999997,
+        "2026-07": 2363.8512,
+        "2026-08": 1772.8883999999998,
+        "2026-09": 1477.4070000000002,
+        "2026-10": 1477.4070000000002,
+        "2026-11": 1181.9256,
+        "2026-12": 1181.9256
+      }
+    },
+    {
+      "devedor": "ROSANIO ZANCO",
+      "processo": "5001918-48.2026.8.21.0109",
+      "comarca": "Juízo da 2ª Vara Judicial da Comarca de Marau",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 392839.78,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Alienação Fiduciária, Aval, Hipoteca",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 30,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 56
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Penhora / Avaliação",
+      "valor_esperado": 51069.17,
+      "distribuicao_mensal": {
+        "2026-05": 2553.4585,
+        "2026-06": 5106.917,
+        "2026-07": 6128.300399999999,
+        "2026-08": 7660.375499999999,
+        "2026-09": 7660.375499999999,
+        "2026-10": 7660.375499999999,
+        "2026-11": 7660.375499999999,
+        "2026-12": 6638.9921
+      }
+    },
+    {
+      "devedor": "JENE COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+      "processo": "5000758-44.2026.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 100000.0,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 2,
+      "score": {
+        "tempo": 0,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 30
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 7000.0,
+      "distribuicao_mensal": {
+        "2026-05": 1260.0,
+        "2026-06": 1260.0,
+        "2026-07": 1120.0,
+        "2026-08": 840.0,
+        "2026-09": 700.0,
+        "2026-10": 700.0,
+        "2026-11": 560.0,
+        "2026-12": 560.0
+      }
+    },
+    {
+      "devedor": "JENE COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+      "processo": "5003614-15.2025.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 270170.08,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 9,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 46
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 19718.35,
+      "distribuicao_mensal": {
+        "2026-05": 3549.3029999999994,
+        "2026-06": 3549.3029999999994,
+        "2026-07": 3154.9359999999997,
+        "2026-08": 2366.2019999999998,
+        "2026-09": 1971.835,
+        "2026-10": 1971.835,
+        "2026-11": 1577.4679999999998,
+        "2026-12": 1577.4679999999998
+      }
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "processo": "5000422-74.2025.8.21.0058",
+      "comarca": "Juízo da 2ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "MONITÓRIA",
+      "valor_causa": 46998.86,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 15,
+      "score": {
+        "tempo": 18,
+        "garantia": 0,
+        "sisbajud": 0,
+        "defesa": -20,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 32
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Penhora / Sisbajud",
+      "valor_esperado": 3289.92,
+      "distribuicao_mensal": {
+        "2026-05": 263.1936,
+        "2026-06": 460.58880000000005,
+        "2026-07": 526.3872,
+        "2026-08": 526.3872,
+        "2026-09": 460.58880000000005,
+        "2026-10": 394.7904,
+        "2026-11": 328.992,
+        "2026-12": 328.992
+      }
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "processo": "5000911-77.2026.8.21.0058",
+      "comarca": "Juízo do Núcleo de Justiça 4.0 de Busca e Apreensão de Veículos Automotores",
+      "classe": "BUSCA E APREENSÃO EM ALIENAÇÃO FIDUCIÁRIA",
+      "valor_causa": 83096.38,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 2,
+      "score": {
+        "tempo": 0,
+        "garantia": 0,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 0,
+        "penhora": 14,
+        "total": 14
+      },
+      "probabilidade": 0.03,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 2492.89,
+      "distribuicao_mensal": {
+        "2026-05": 448.7202,
+        "2026-06": 448.7202,
+        "2026-07": 398.8624,
+        "2026-08": 299.1468,
+        "2026-09": 249.289,
+        "2026-10": 249.289,
+        "2026-11": 199.4312,
+        "2026-12": 199.4312
+      }
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "processo": "5001197-89.2025.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 27992.44,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 13,
+      "score": {
+        "tempo": 18,
+        "garantia": 0,
+        "sisbajud": 0,
+        "defesa": -5,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 39
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Penhora / Sisbajud",
+      "valor_esperado": 1959.47,
+      "distribuicao_mensal": {
+        "2026-05": 156.7576,
+        "2026-06": 274.3258,
+        "2026-07": 313.5152,
+        "2026-08": 313.5152,
+        "2026-09": 274.3258,
+        "2026-10": 235.13639999999998,
+        "2026-11": 195.947,
+        "2026-12": 195.947
+      }
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "processo": "5001482-48.2026.8.21.0058",
+      "comarca": "Juízo da 2ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "CUMPRIMENTO DE SENTENÇA",
+      "valor_causa": 124650.05,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 0,
+        "sisbajud": 0,
+        "defesa": -5,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 21
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 8725.5,
+      "distribuicao_mensal": {
+        "2026-05": 1570.59,
+        "2026-06": 1570.59,
+        "2026-07": 1396.08,
+        "2026-08": 1047.06,
+        "2026-09": 872.5500000000001,
+        "2026-10": 872.5500000000001,
+        "2026-11": 698.04,
+        "2026-12": 698.04
+      }
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "processo": "5002145-31.2025.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EMBARGOS À EXECUÇÃO",
+      "valor_causa": 11605.83,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 11,
+      "score": {
+        "tempo": 12,
+        "garantia": 0,
+        "sisbajud": 0,
+        "defesa": -20,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 26
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo",
+      "valor_esperado": 812.41,
+      "distribuicao_mensal": {
+        "2026-05": 178.7302,
+        "2026-06": 162.482,
+        "2026-07": 146.2338,
+        "2026-08": 97.4892,
+        "2026-09": 81.241,
+        "2026-10": 64.9928,
+        "2026-11": 48.7446,
+        "2026-12": 32.4964
+      }
+    },
+    {
+      "devedor": "GARDA E PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "processo": "5006245-63.2024.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 67199.6,
+      "sisbajud_bloqueado": 2978.63,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 16,
+      "score": {
+        "tempo": 18,
+        "garantia": 0,
+        "sisbajud": 14,
+        "defesa": -20,
+        "acordo": 20,
+        "penhora": 21,
+        "total": 53
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo",
+      "valor_esperado": 8735.95,
+      "distribuicao_mensal": {
+        "2026-05": 1921.909,
+        "2026-06": 1747.1900000000003,
+        "2026-07": 1572.471,
+        "2026-08": 1048.314,
+        "2026-09": 873.5950000000001,
+        "2026-10": 698.8760000000001,
+        "2026-11": 524.157,
+        "2026-12": 349.43800000000005
+      }
+    },
+    {
+      "devedor": "ALINE ANTUNES GARDA BREGALDA",
+      "processo": "5000729-91.2026.8.21.0058",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 258022.1,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 2,
+      "score": {
+        "tempo": 0,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 34
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 18061.55,
+      "distribuicao_mensal": {
+        "2026-05": 3251.0789999999997,
+        "2026-06": 3251.0789999999997,
+        "2026-07": 2889.848,
+        "2026-08": 2167.386,
+        "2026-09": 1806.155,
+        "2026-10": 1806.155,
+        "2026-11": 1444.924,
+        "2026-12": 1444.924
+      }
+    },
+    {
+      "devedor": "JOAO JOEL RIBEIRO",
+      "processo": "5003152-61.2025.8.21.0057",
+      "comarca": "Juízo da 1ª Vara Cível da Comarca de Lagoa Vermelha",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 218190.75,
+      "sisbajud_bloqueado": 1240.54,
+      "garantia": "Aval",
+      "meses_no_rito": 10,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 14,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 60
+      },
+      "probabilidade": 0.22,
+      "tipo_previsao": "Sisbajud (renovação)",
+      "valor_esperado": 23679.71,
+      "distribuicao_mensal": {
+        "2026-05": 2367.971,
+        "2026-06": 4262.3478,
+        "2026-07": 4735.942,
+        "2026-08": 4262.3478,
+        "2026-09": 2841.5652,
+        "2026-10": 2367.971,
+        "2026-11": 1657.5797,
+        "2026-12": 1183.9855
+      }
+    },
+    {
+      "devedor": "ADILSON CARLOS AUTOMOVEIS",
+      "processo": "5002927-71.2025.8.21.0144",
+      "comarca": "Juízo da Vara Judicial da Comarca de Carlos Barbosa",
+      "classe": "MONITÓRIA",
+      "valor_causa": 28172.39,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Alienação Fiduciária, Aval",
+      "meses_no_rito": 7,
+      "score": {
+        "tempo": 12,
+        "garantia": 25,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 0,
+        "penhora": 14,
+        "total": 39
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Penhora / Avaliação",
+      "valor_esperado": 1972.07,
+      "distribuicao_mensal": {
+        "2026-05": 98.6035,
+        "2026-06": 197.207,
+        "2026-07": 236.64839999999998,
+        "2026-08": 295.8105,
+        "2026-09": 295.8105,
+        "2026-10": 295.8105,
+        "2026-11": 295.8105,
+        "2026-12": 256.3691
+      }
+    },
+    {
+      "devedor": "ADILSON CARLOS AUTOMOVEIS",
+      "processo": "5002258-18.2025.8.21.0144",
+      "comarca": "Juízo da Vara Judicial da Comarca de Carlos Barbosa",
+      "classe": "BUSCA E APREENSÃO EM ALIENAÇÃO FIDUCIÁRIA",
+      "valor_causa": 140781.51,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Alienação Fiduciária, Aval",
+      "meses_no_rito": 9,
+      "score": {
+        "tempo": 12,
+        "garantia": 25,
+        "sisbajud": 0,
+        "defesa": -12,
+        "acordo": 0,
+        "penhora": 14,
+        "total": 39
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Penhora / Avaliação",
+      "valor_esperado": 9854.71,
+      "distribuicao_mensal": {
+        "2026-05": 492.7355,
+        "2026-06": 985.471,
+        "2026-07": 1182.5651999999998,
+        "2026-08": 1478.2064999999998,
+        "2026-09": 1478.2064999999998,
+        "2026-10": 1478.2064999999998,
+        "2026-11": 1478.2064999999998,
+        "2026-12": 1281.1123
+      }
+    },
+    {
+      "devedor": "A2 MOVEIS LTDA",
+      "processo": "5001507-64.2026.8.21.0057",
+      "comarca": "Juízo da 2ª Vara Cível da Comarca de Lagoa Vermelha",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 39442.55,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 12,
+        "penhora": 6,
+        "total": 26
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 2760.98,
+      "distribuicao_mensal": {
+        "2026-05": 496.9764,
+        "2026-06": 496.9764,
+        "2026-07": 441.7568,
+        "2026-08": 331.31759999999997,
+        "2026-09": 276.098,
+        "2026-10": 276.098,
+        "2026-11": 220.8784,
+        "2026-12": 220.8784
+      }
+    },
+    {
+      "devedor": "A2 MOVEIS LTDA",
+      "processo": "5004486-33.2025.8.21.0057",
+      "comarca": "Juízo da 2ª Vara Cível da Comarca de Lagoa Vermelha",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 118589.85,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 46
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 12132.8,
+      "distribuicao_mensal": {
+        "2026-05": 2183.904,
+        "2026-06": 2183.904,
+        "2026-07": 1941.2479999999998,
+        "2026-08": 1455.936,
+        "2026-09": 1213.28,
+        "2026-10": 1213.28,
+        "2026-11": 970.6239999999999,
+        "2026-12": 970.6239999999999
+      }
+    },
+    {
+      "devedor": "FERNANDO PIGOZZO",
+      "processo": "5001175-94.2026.8.21.0058",
+      "comarca": "Juízo da 2ª Vara Judicial da Comarca de Nova Prata",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 130790.15,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval, Hipoteca",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 30,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 0,
+        "penhora": 29,
+        "total": 59
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Leilão / Adjudicação",
+      "valor_esperado": 14384.76,
+      "distribuicao_mensal": {
+        "2026-05": 287.6952,
+        "2026-06": 719.238,
+        "2026-07": 1150.7808,
+        "2026-08": 2157.714,
+        "2026-09": 2876.952,
+        "2026-10": 3164.6472,
+        "2026-11": 2589.2568,
+        "2026-12": 1438.476
+      }
+    },
+    {
+      "devedor": "AUSTRAL AGRICOLA LTDA",
+      "processo": "5000402-23.2025.8.21.0078",
+      "comarca": "Juízo da Vara Judicial da Comarca de Veranópolis",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 130616.53,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 14,
+      "score": {
+        "tempo": 18,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": -5,
+        "acordo": 20,
+        "penhora": 31,
+        "total": 72
+      },
+      "probabilidade": 0.22,
+      "tipo_previsao": "Penhora / Sisbajud",
+      "valor_esperado": 28735.64,
+      "distribuicao_mensal": {
+        "2026-05": 2298.8512,
+        "2026-06": 4022.9896000000003,
+        "2026-07": 4597.7024,
+        "2026-08": 4597.7024,
+        "2026-09": 4022.9896000000003,
+        "2026-10": 3448.2767999999996,
+        "2026-11": 2873.5640000000003,
+        "2026-12": 2873.5640000000003
+      }
+    },
+    {
+      "devedor": "LUANNTUR TURISMO LTDA",
+      "processo": "5011774-91.2025.8.21.0005",
+      "comarca": "Juízo da 2ª Vara Cível da Comarca de Bento Gonçalves",
+      "classe": "BUSCA E APREENSÃO EM ALIENAÇÃO FIDUCIÁRIA",
+      "valor_causa": 118540.83,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Alienação Fiduciária, Aval",
+      "meses_no_rito": 8,
+      "score": {
+        "tempo": 12,
+        "garantia": 25,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 12,
+        "penhora": 14,
+        "total": 63
+      },
+      "probabilidade": 0.22,
+      "tipo_previsao": "Penhora / Avaliação",
+      "valor_esperado": 26078.98,
+      "distribuicao_mensal": {
+        "2026-05": 1303.949,
+        "2026-06": 2607.898,
+        "2026-07": 3129.4775999999997,
+        "2026-08": 3911.8469999999998,
+        "2026-09": 3911.8469999999998,
+        "2026-10": 3911.8469999999998,
+        "2026-11": 3911.8469999999998,
+        "2026-12": 3390.2674
+      }
+    },
+    {
+      "devedor": "CLEBER ALVES",
+      "processo": "5001691-88.2025.8.21.0078",
+      "comarca": "Juízo da Vara Judicial da Comarca de Veranópolis",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 99423.03,
+      "sisbajud_bloqueado": 38574.77,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 11,
+      "score": {
+        "tempo": 12,
+        "garantia": 0,
+        "sisbajud": 30,
+        "defesa": -12,
+        "acordo": 20,
+        "penhora": 14,
+        "total": 64
+      },
+      "probabilidade": 0.22,
+      "tipo_previsao": "Sisbajud (renovação)",
+      "valor_esperado": 4032.12,
+      "distribuicao_mensal": {
+        "2026-05": 403.212,
+        "2026-06": 725.7815999999999,
+        "2026-07": 806.424,
+        "2026-08": 725.7815999999999,
+        "2026-09": 483.85439999999994,
+        "2026-10": 403.212,
+        "2026-11": 282.2484,
+        "2026-12": 201.606
+      }
+    },
+    {
+      "devedor": "CLEBER ALVES",
+      "processo": "5071409-33.2026.8.21.7000",
+      "comarca": "Gab. Desa. Rute dos Santos Rossato",
+      "classe": "Agravo de Instrumento",
+      "valor_causa": 14542.08,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Sem garantia",
+      "meses_no_rito": 1,
+      "score": {
+        "tempo": 0,
+        "garantia": 0,
+        "sisbajud": 0,
+        "defesa": -20,
+        "acordo": 0,
+        "penhora": 14,
+        "total": 0
+      },
+      "probabilidade": 0.03,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 436.26,
+      "distribuicao_mensal": {
+        "2026-05": 78.5268,
+        "2026-06": 78.5268,
+        "2026-07": 69.8016,
+        "2026-08": 52.3512,
+        "2026-09": 43.626000000000005,
+        "2026-10": 43.626000000000005,
+        "2026-11": 34.9008,
+        "2026-12": 34.9008
+      }
+    },
+    {
+      "devedor": "GRAZIELA DE ALMEIDA CALEGARI",
+      "processo": "5000323-14.2026.8.21.0109",
+      "comarca": "Juízo da 1ª Vara Judicial da Comarca de Marau",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 108861.94,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Alienação Fiduciária, Aval",
+      "meses_no_rito": 3,
+      "score": {
+        "tempo": 6,
+        "garantia": 25,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 57
+      },
+      "probabilidade": 0.13,
+      "tipo_previsao": "Penhora / Avaliação",
+      "valor_esperado": 14152.05,
+      "distribuicao_mensal": {
+        "2026-05": 707.6025,
+        "2026-06": 1415.205,
+        "2026-07": 1698.2459999999999,
+        "2026-08": 2122.8075,
+        "2026-09": 2122.8075,
+        "2026-10": 2122.8075,
+        "2026-11": 2122.8075,
+        "2026-12": 1839.7665
+      }
+    },
+    {
+      "devedor": "EMANUELA ALIPRANDINI",
+      "processo": "5000443-13.2025.8.21.0135",
+      "comarca": "Juízo da Vara Judicial da Comarca de Tapejara",
+      "classe": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+      "valor_causa": 92754.54,
+      "sisbajud_bloqueado": 2609.74,
+      "garantia": "Aval",
+      "meses_no_rito": 14,
+      "score": {
+        "tempo": 18,
+        "garantia": 8,
+        "sisbajud": 14,
+        "defesa": 0,
+        "acordo": 20,
+        "penhora": 6,
+        "total": 66
+      },
+      "probabilidade": 0.22,
+      "tipo_previsao": "Sisbajud (renovação)",
+      "valor_esperado": 20406.0,
+      "distribuicao_mensal": {
+        "2026-05": 2040.6000000000001,
+        "2026-06": 3673.08,
+        "2026-07": 4081.2000000000003,
+        "2026-08": 3673.08,
+        "2026-09": 2448.72,
+        "2026-10": 2040.6000000000001,
+        "2026-11": 1428.42,
+        "2026-12": 1020.3000000000001
+      }
+    },
+    {
+      "devedor": "PAULO MATTIELLO",
+      "processo": "5001495-84.2026.8.21.0078",
+      "comarca": "Juízo da Vara Judicial da Comarca de Veranópolis",
+      "classe": "MONITÓRIA",
+      "valor_causa": 19177.93,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval, Penhor",
+      "meses_no_rito": 0,
+      "score": {
+        "tempo": 0,
+        "garantia": 18,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 0,
+        "penhora": 6,
+        "total": 24
+      },
+      "probabilidade": 0.07,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 1342.46,
+      "distribuicao_mensal": {
+        "2026-05": 241.6428,
+        "2026-06": 241.6428,
+        "2026-07": 214.7936,
+        "2026-08": 161.0952,
+        "2026-09": 134.246,
+        "2026-10": 134.246,
+        "2026-11": 107.3968,
+        "2026-12": 107.3968
+      }
+    },
+    {
+      "devedor": "RUBY DESIGNER EM ESTOFADOS LTDA",
+      "processo": "5002452-06.2025.8.21.0051",
+      "comarca": null,
+      "classe": null,
+      "valor_causa": 0.0,
+      "sisbajud_bloqueado": 0.0,
+      "garantia": "Aval",
+      "meses_no_rito": 0,
+      "score": {
+        "tempo": 0,
+        "garantia": 8,
+        "sisbajud": 0,
+        "defesa": 0,
+        "acordo": 0,
+        "penhora": 0,
+        "total": 8
+      },
+      "probabilidade": 0.03,
+      "tipo_previsao": "Acordo Extrajudicial",
+      "valor_esperado": 1647.92,
+      "distribuicao_mensal": {
+        "2026-05": 296.6256,
+        "2026-06": 296.6256,
+        "2026-07": 263.66720000000004,
+        "2026-08": 197.7504,
+        "2026-09": 164.79200000000003,
+        "2026-10": 164.79200000000003,
+        "2026-11": 131.83360000000002,
+        "2026-12": 131.83360000000002
+      }
+    }
+  ],
+  "total_previsto": 733620.35
+}

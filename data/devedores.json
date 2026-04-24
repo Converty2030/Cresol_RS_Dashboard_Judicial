@@ -1,0 +1,621 @@
+{
+  "consolidado": {
+    "total_devedores_unicos": 22,
+    "total_registros": 26,
+    "divida_global_total": 12263462.46,
+    "valor_em_atraso_total": 2063933.07,
+    "percentual_atraso": 16.83,
+    "agencias": [
+      "30051 - Pac Gentil",
+      "300515 - Pac Tapejara Rs",
+      "30052 - Pac Mato Castelhano",
+      "300523 - Pac Veranópolis",
+      "300524 - Pac Carlos Barbosa",
+      "300527 - Pac Ibiraiaras",
+      "30053 - Pac São Jorge",
+      "30054 - Pac Lagoa Vermelha",
+      "30055 - Pac Marau Rs",
+      "30056 - Pac Nova Prata"
+    ],
+    "assessorias": [
+      "CONJUD",
+      "CONVEX"
+    ]
+  },
+  "devedores": [
+    {
+      "socio": "ATRIA AGRO TECNICA LTDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 1353700.0,
+      "valor_em_atraso_total": 408815.63,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30056 - Pac Nova Prata"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "ATRIA AGRO TECNICA LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30056 - Pac Nova Prata",
+          "divida_global": 1353700.0,
+          "valor_em_atraso": 408815.63
+        }
+      ]
+    },
+    {
+      "socio": "ALINE ANTUNES GARDA BREGALDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 407142.32,
+      "valor_em_atraso_total": 253339.71,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30053 - Pac São Jorge"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "ALINE ANTUNES GARDA BREGALDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30053 - Pac São Jorge",
+          "divida_global": 407142.32,
+          "valor_em_atraso": 253339.71
+        }
+      ]
+    },
+    {
+      "socio": "LUIZ FELIPE MIORANDO",
+      "qtd_contratos": 1,
+      "divida_global_total": 768413.82,
+      "valor_em_atraso_total": 202895.5,
+      "tipos_garantia": [
+        "Alienação Fiduciária De Bem Móvel-Veículo",
+        "Aval"
+      ],
+      "agencias": [
+        "30052 - Pac Mato Castelhano"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "LUIZ FELIPE MIORANDO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Veículo | Aval",
+          "agencia": "30052 - Pac Mato Castelhano",
+          "divida_global": 768413.82,
+          "valor_em_atraso": 202895.5
+        }
+      ]
+    },
+    {
+      "socio": "JOAO CARLOS DOS SANTOS DE MELLO",
+      "qtd_contratos": 1,
+      "divida_global_total": 404936.34,
+      "valor_em_atraso_total": 167583.83,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30052 - Pac Mato Castelhano"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "JOAO CARLOS DOS SANTOS DE MELLO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30052 - Pac Mato Castelhano",
+          "divida_global": 404936.33999999997,
+          "valor_em_atraso": 167583.83
+        }
+      ]
+    },
+    {
+      "socio": "AUSTRAL AGRICOLA LTDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 500643.71,
+      "valor_em_atraso_total": 154419.15,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30056 - Pac Nova Prata"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "AUSTRAL AGRICOLA LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30056 - Pac Nova Prata",
+          "divida_global": 500643.70999999996,
+          "valor_em_atraso": 154419.15
+        }
+      ]
+    },
+    {
+      "socio": "ROSANIO ZANCO",
+      "qtd_contratos": 3,
+      "divida_global_total": 1639297.02,
+      "valor_em_atraso_total": 123564.38,
+      "tipos_garantia": [
+        "Alienação Fiduciária De Bem Móvel-Máquinário",
+        "Aval",
+        "Hipoteca De Quarto Grau",
+        "Hipoteca De Segundo Grau"
+      ],
+      "agencias": [
+        "30055 - Pac Marau Rs"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "ROSANIO ZANCO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval | Hipoteca De Quarto Grau",
+          "agencia": "30055 - Pac Marau Rs",
+          "divida_global": 546432.34,
+          "valor_em_atraso": 68731.48
+        },
+        {
+          "socio": "ROSANIO ZANCO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval | Hipoteca De Quarto Grau",
+          "agencia": "30055 - Pac Marau Rs",
+          "divida_global": 546432.34,
+          "valor_em_atraso": 34854.6
+        },
+        {
+          "socio": "ROSANIO ZANCO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Máquinário | Aval | Hipoteca De Segundo Grau",
+          "agencia": "30055 - Pac Marau Rs",
+          "divida_global": 546432.34,
+          "valor_em_atraso": 19978.3
+        }
+      ]
+    },
+    {
+      "socio": "ELEANDRA TAPPARO DE LIMA",
+      "qtd_contratos": 1,
+      "divida_global_total": 472900.77,
+      "valor_em_atraso_total": 116461.15,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30052 - Pac Mato Castelhano"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "ELEANDRA TAPPARO DE LIMA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30052 - Pac Mato Castelhano",
+          "divida_global": 472900.76999999996,
+          "valor_em_atraso": 116461.15
+        }
+      ]
+    },
+    {
+      "socio": "PAULO MATTIELLO",
+      "qtd_contratos": 1,
+      "divida_global_total": 366847.79,
+      "valor_em_atraso_total": 108710.26,
+      "tipos_garantia": [
+        "Aval",
+        "Penhor Pecuário - Semoventes -Descrição No Item D -Qd Resumo"
+      ],
+      "agencias": [
+        "30056 - Pac Nova Prata"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "PAULO MATTIELLO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval | Penhor Pecuário - Semoventes -Descrição No Item D -Qd Resumo",
+          "agencia": "30056 - Pac Nova Prata",
+          "divida_global": 366847.79,
+          "valor_em_atraso": 108710.26
+        }
+      ]
+    },
+    {
+      "socio": "PESSOTTO FABRICACAO DE PAINEIS LTDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 558542.83,
+      "valor_em_atraso_total": 78021.29,
+      "tipos_garantia": [
+        "Operação Sem Garantias"
+      ],
+      "agencias": [
+        "30056 - Pac Nova Prata"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "PESSOTTO FABRICACAO DE PAINEIS LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Operação Sem Garantias",
+          "agencia": "30056 - Pac Nova Prata",
+          "divida_global": 558542.8300000001,
+          "valor_em_atraso": 78021.29
+        }
+      ]
+    },
+    {
+      "socio": "FABIO JOSE PEDROSO",
+      "qtd_contratos": 2,
+      "divida_global_total": 967512.48,
+      "valor_em_atraso_total": 71492.17,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30055 - Pac Marau Rs"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "FABIO JOSE PEDROSO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30055 - Pac Marau Rs",
+          "divida_global": 483756.24,
+          "valor_em_atraso": 43149.78
+        },
+        {
+          "socio": "FABIO JOSE PEDROSO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30055 - Pac Marau Rs",
+          "divida_global": 483756.24,
+          "valor_em_atraso": 28342.39
+        }
+      ]
+    },
+    {
+      "socio": "JOEL EDGAR CHIZZONI",
+      "qtd_contratos": 1,
+      "divida_global_total": 258738.74,
+      "valor_em_atraso_total": 61498.88,
+      "tipos_garantia": [
+        "Alienação Fiduciária De Bem Móvel-Máquinário-Terceiros",
+        "Aval"
+      ],
+      "agencias": [
+        "30052 - Pac Mato Castelhano"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "JOEL EDGAR CHIZZONI",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Máquinário-Terceiros | Aval",
+          "agencia": "30052 - Pac Mato Castelhano",
+          "divida_global": 258738.74000000002,
+          "valor_em_atraso": 61498.88
+        }
+      ]
+    },
+    {
+      "socio": "RUBY DESIGNER EM ESTOFADOS LTDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 431083.83,
+      "valor_em_atraso_total": 54930.7,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "300524 - Pac Carlos Barbosa"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "RUBY DESIGNER EM ESTOFADOS LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "300524 - Pac Carlos Barbosa",
+          "divida_global": 431083.83,
+          "valor_em_atraso": 54930.7
+        }
+      ]
+    },
+    {
+      "socio": "LUANNTUR TURISMO LTDA",
+      "qtd_contratos": 2,
+      "divida_global_total": 1070595.82,
+      "valor_em_atraso_total": 53703.75,
+      "tipos_garantia": [
+        "Alienação Fiduciária De Bem Móvel-Veículo",
+        "Alienação Fiduciária De Bem Móvel-Veículo-Terceiros",
+        "Aval"
+      ],
+      "agencias": [
+        "300524 - Pac Carlos Barbosa"
+      ],
+      "assessorias": [
+        "CONJUD",
+        "CONVEX"
+      ],
+      "contratos": [
+        {
+          "socio": "LUANNTUR TURISMO LTDA",
+          "assessoria": "CONVEX",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Veículo | Aval",
+          "agencia": "300524 - Pac Carlos Barbosa",
+          "divida_global": 535297.9099999999,
+          "valor_em_atraso": 33208.36
+        },
+        {
+          "socio": "LUANNTUR TURISMO LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Veículo-Terceiros | Aval",
+          "agencia": "300524 - Pac Carlos Barbosa",
+          "divida_global": 535297.9099999999,
+          "valor_em_atraso": 20495.39
+        }
+      ]
+    },
+    {
+      "socio": "ADILSON CARLOS AUTOMOVEIS",
+      "qtd_contratos": 1,
+      "divida_global_total": 328712.0,
+      "valor_em_atraso_total": 45781.41,
+      "tipos_garantia": [
+        "Alienação Fiduciária De Bem Móvel-Veículo",
+        "Aval"
+      ],
+      "agencias": [
+        "300524 - Pac Carlos Barbosa"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "ADILSON CARLOS AUTOMOVEIS",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Veículo | Aval",
+          "agencia": "300524 - Pac Carlos Barbosa",
+          "divida_global": 328712.0,
+          "valor_em_atraso": 45781.41
+        }
+      ]
+    },
+    {
+      "socio": "MONALISA PIVA MIGLIAVACCA  ME",
+      "qtd_contratos": 1,
+      "divida_global_total": 716509.86,
+      "valor_em_atraso_total": 34712.41,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "300527 - Pac Ibiraiaras"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "MONALISA PIVA MIGLIAVACCA  ME",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "300527 - Pac Ibiraiaras",
+          "divida_global": 716509.86,
+          "valor_em_atraso": 34712.41
+        }
+      ]
+    },
+    {
+      "socio": "JENE COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 371471.97,
+      "valor_em_atraso_total": 32863.91,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30056 - Pac Nova Prata"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "JENE COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30056 - Pac Nova Prata",
+          "divida_global": 371471.97,
+          "valor_em_atraso": 32863.91
+        }
+      ]
+    },
+    {
+      "socio": "EMANUELA ALIPRANDINI",
+      "qtd_contratos": 1,
+      "divida_global_total": 165291.34,
+      "valor_em_atraso_total": 20268.92,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "300515 - Pac Tapejara Rs"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "EMANUELA ALIPRANDINI",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "300515 - Pac Tapejara Rs",
+          "divida_global": 165291.34,
+          "valor_em_atraso": 20268.92
+        }
+      ]
+    },
+    {
+      "socio": "A2 MOVEIS LTDA",
+      "qtd_contratos": 1,
+      "divida_global_total": 427389.9,
+      "valor_em_atraso_total": 20221.34,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "30054 - Pac Lagoa Vermelha"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "A2 MOVEIS LTDA",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "30054 - Pac Lagoa Vermelha",
+          "divida_global": 427389.9,
+          "valor_em_atraso": 20221.34
+        }
+      ]
+    },
+    {
+      "socio": "JOAO JOEL RIBEIRO",
+      "qtd_contratos": 1,
+      "divida_global_total": 274267.01,
+      "valor_em_atraso_total": 19733.09,
+      "tipos_garantia": [
+        "Aval"
+      ],
+      "agencias": [
+        "300527 - Pac Ibiraiaras"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "JOAO JOEL RIBEIRO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval",
+          "agencia": "300527 - Pac Ibiraiaras",
+          "divida_global": 274267.01,
+          "valor_em_atraso": 19733.09
+        }
+      ]
+    },
+    {
+      "socio": "GRAZIELA DE ALMEIDA CALEGARI",
+      "qtd_contratos": 1,
+      "divida_global_total": 116680.03,
+      "valor_em_atraso_total": 16208.09,
+      "tipos_garantia": [
+        "Alienação Fiduciária De Bem Móvel-Veículo",
+        "Aval"
+      ],
+      "agencias": [
+        "30051 - Pac Gentil"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "GRAZIELA DE ALMEIDA CALEGARI",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Alienação Fiduciária De Bem Móvel-Veículo | Aval",
+          "agencia": "30051 - Pac Gentil",
+          "divida_global": 116680.03,
+          "valor_em_atraso": 16208.09
+        }
+      ]
+    },
+    {
+      "socio": "FERNANDO PIGOZZO",
+      "qtd_contratos": 1,
+      "divida_global_total": 518817.48,
+      "valor_em_atraso_total": 11987.3,
+      "tipos_garantia": [
+        "Aval",
+        "Hipoteca De Terceiro Grau"
+      ],
+      "agencias": [
+        "30053 - Pac São Jorge"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "FERNANDO PIGOZZO",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Aval | Hipoteca De Terceiro Grau",
+          "agencia": "30053 - Pac São Jorge",
+          "divida_global": 518817.48000000004,
+          "valor_em_atraso": 11987.3
+        }
+      ]
+    },
+    {
+      "socio": "CLEBER ALVES",
+      "qtd_contratos": 1,
+      "divida_global_total": 143967.4,
+      "valor_em_atraso_total": 6720.2,
+      "tipos_garantia": [
+        "Operação Sem Garantias"
+      ],
+      "agencias": [
+        "300523 - Pac Veranópolis"
+      ],
+      "assessorias": [
+        "CONJUD"
+      ],
+      "contratos": [
+        {
+          "socio": "CLEBER ALVES",
+          "assessoria": "CONJUD",
+          "tipo_garantia": "Operação Sem Garantias",
+          "agencia": "300523 - Pac Veranópolis",
+          "divida_global": 143967.4,
+          "valor_em_atraso": 6720.2
+        }
+      ]
+    }
+  ]
+}
